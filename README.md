@@ -22,7 +22,7 @@ pod 'SwiftyHelpful'
 
 ## Author
 
-tamhuynh5288@gmail.com, tam.huynh@defide-ix.com
+tamhuynh5288@gmail.com
 
 ## License
 
