@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyHelpful (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyHelpful (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyHelpful:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyHelpful: 8452c2769bbf772b8ca0ce9eda7e70a0af14a845
+
+PODFILE CHECKSUM: 63421222c032339c93026d761587e3af0e796c00
+
+COCOAPODS: 1.5.3

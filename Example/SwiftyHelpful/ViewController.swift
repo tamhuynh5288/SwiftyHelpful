@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SwiftyHelpful
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let yellowView = UIView()
+        yellowView.backgroundColor = UIColor.yellow
+        view.addSubview(yellowView)
+        yellowView.scaleEqualSuperView()
     }
 
     override func didReceiveMemoryWarning() {
