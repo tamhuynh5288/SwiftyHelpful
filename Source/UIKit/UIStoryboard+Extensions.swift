@@ -1,6 +1,6 @@
 //
 //  UIStoryboard+Extensions.swift
-//  SwiftyExtensions
+//  SwiftyHelpful
 //
 //  Created by Tam Huynh on 7/10/18.
 //  Copyright © 2018 TH. All rights reserved.
@@ -18,12 +18,12 @@ public protocol StoryboardInstantiate {
 
 public extension StoryboardInstantiate {
     func instantiateRootController(storyboardName name: String? = nil) -> UIViewController? {
-        let storyboard = UIStoryboard(name: name ?? "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: name ?? "Main", bundle: Bundle.main)
         return storyboard.instantiateInitialViewController()
     }
     
     func instantiateViewController(identifier: String, storyboardName name: String? = nil) -> UIViewController {
-        let storyboard = UIStoryboard(name: name ?? "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: name ?? "Main", bundle: Bundle.main)
         return storyboard.instantiateViewController(withIdentifier: identifier)
     }
     

@@ -1,6 +1,6 @@
 //
 //  UINavigationController+Extensions.swift
-//  SwiftyExtensions
+//  SwiftyHelpful
 //
 //  Created by Tam Huynh on 7/10/18.
 //  Copyright © 2018 TH. All rights reserved.
@@ -13,6 +13,8 @@ import UIKit
 public enum NavigationStyle {
     case original(leftButtons: [Any]?, rightButtons: [Any]?, customViewCenter: UIView?)
     case fitSize(leftButtons: [Any]?, rightButtons: [Any]?, customViewCenter: UIView?)
+    
+    static let navigationBarHeight = UINavigationController().navigationBar.bounds.height
     
     var type: (leftButtons: [Any]?, rightButtons: [Any]?, customViewCenter: UIView?)? {
         switch self {
@@ -33,7 +35,7 @@ public enum NavigationStyle {
         for view in views {
             if let view = view as? UIView {
                 var frame = view.frame
-                let height = UINavigationController().navigationBar.bounds.height
+                let height = NavigationStyle.navigationBarHeight
                 let width = view.sizeThatFits(CGSize(width: UIScreen.main.bounds.width, height: height)).width
                 frame.size = CGSize(width: width >= height ? width : height, height: height)
                 view.frame = frame
